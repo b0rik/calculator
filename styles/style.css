@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    gap: 2px;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.second {
+    align-self: start;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.display > * {
+    padding: 8px;
+}
+
+.grid button {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.display {
+    grid-column: 1 / -1;
+    /* temp */
+    border: 1px solid black; 
+}
+
